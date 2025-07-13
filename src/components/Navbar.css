@@ -1,0 +1,28 @@
+nav {
+  background-color: rgb(1, 1, 36);
+  display: flex;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 1px 1px 70px rgb(192, 190, 190);
+  z-index: 9999;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.nav-items-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.nav-item {
+  list-style: none;
+}

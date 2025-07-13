@@ -1,0 +1,80 @@
+=============[Recat Hooks]===========
+react hooks are functionalities that we use to handle some
+complex functionalities in react.
+
+Three categories of react hooks:
+1. Basic Hooks - (useState, useEffect and useContext) - commonly used
+2. Additional Hooks - (useReducer, useCallback, useMemo, useRef, useImparativeHandle, useLayout, useDebugValue)
+3. Newer hooks(vs 18+) - (useID, useTransition, useDeferredValue, useSyncExternalStore, useInsertionEffect) 
+4. Custom Hooks - are functions that make use of react hooks in them
+N.B: They start with 'use' keyword
+Importance - they help you reuse logics across components
+
+Rules of Hooks
+1. Hooks are extended functionalities and so they are imported
+2. Hooks are used before the return statement in a component
+3. Hooks cannot be used before they are initialized
+
+1. UseState Hook - this simply adds state to a functional component
+// useState Hooks - Used to manage states in a react component.
+
+//useEffect Hooks
+=> a hook that we use to handle anything that happens outside a react component
+1. console.log
+2. setting up timers and intervals
+3. listening to scroll or key events
+4. updating the DOM directly
+
+syntax
+useEffect(()=>{
+    // code to run when the component renders
+}, [dependencies])
+
+useRef - A hook that we use to access underlying DOM() element
+Hints: Every html  element is entitled to an attribute "ref";
+
+what is useReducer?
+This is a react hook, use for state management
+NB - it takes two parameters
+const = [state, dispatch] = useReducer(reducer, initialState)
+const = [state, setState] = useState(initialValue)
+
+-> reducer a function that receives the current state and action and 
+returns the new state
+
+-> initialState: this is the initial value of the state
+-> dispatch: a function to send action to the reducer 
+
+*************** Problem Case ***********************
+problem case: implement a case where users of a shopping 
+cart system where users can add to cart, remove from cart,
+increase or decrease the quantity of a product in a cart
+***************
+
+
+*******************UseContext Hook******************
+The UseContext hook is used to access data from a component
+without passing props manually through every level of a 
+component tree. This helps you to avoid props drilling, 
+and makes shared data/state accessible anywhere in your
+component hyrachy.
+
+2 key concepts in the context hook:
+a. context provides - components that makes data available
+b. context consumers - components that uses the provided data 
+
+N.B. - To create a context, the provider needs a hook, called
+createContext,
+and the consumers use a hook called "useContext"
+
+***************KEYS***************
+keys => keys are react concepts that we use to help react
+component to uniquely identify each existing data in a component
+
+keys help a react component to know which data has been added,
+removed or moved or changed to be able to re compile and 
+re render correctly with the updated data.
+
+Hence, without keys react, may render outdated data ormis-managed
+data and might not be efficient to track updated data
+in a component.

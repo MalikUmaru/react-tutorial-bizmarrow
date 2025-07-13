@@ -1,0 +1,65 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+/* add animation for sliding background image */
+@keyframes slideBackground {
+  0% {
+    background-image: url("../assets/sample.jpg");
+  }
+  33% {
+    background-image: url("../assets/sample2.jpg");
+  }
+  66% {
+    background-image: url("../assets/sample3.jpg");
+  }
+  100% {
+    background-image: url("../assets/sample4.jpg");
+  }
+}
+
+.container{
+  animation: slideBackground 15s infinite;
+  background-size: cover;
+  background-position: center;
+  transition: backgroundimage is ease-out;
+}
+.home-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 350px;
+  height: 350px;
+  background-color: rgb(1, 1, 36);
+  color: #fff;
+  text-align: center;
+  align-content: center;
+  padding: 30px;
+  border: 1px solid white;
+  box-shadow: 15px -15px 1px rgb(1, 1, 36);
+}
+h1 {
+  font-size: 25px;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeup 1.5s ease-out forwards infinite;
+  transition: all 0.9s;
+}
+.cta-btn {
+  background-color: #4d487a;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px #4d487a;
+}
+
+@keyframes fadeup {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
